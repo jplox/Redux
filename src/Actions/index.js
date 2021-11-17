@@ -1,6 +1,5 @@
 /**
  * Actions: Actions are a plain JavaScript object that contains information. Actions are the only source of information for the store. Actions have a type field that tells what kind of action to perform and all other fields contain information or data.
- * @returns
  */
 
 /**
@@ -32,6 +31,14 @@ const IncrementByAmount = (num) => {
   return {
     type: "IncrementByAmount",
     payload: num,
-  };
+  }; 
 };
-export { IncNum, DecNum, IncrementByAmount };
+
+
+const DecrementByAmount = (num)=>{
+  return{
+    type:"DecrementByAmount",
+    payload:num,
+  }
+}
+export { IncNum, DecNum, IncrementByAmount , DecrementByAmount };

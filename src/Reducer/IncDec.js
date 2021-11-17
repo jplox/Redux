@@ -19,6 +19,13 @@ const ChangeNum = (state = intialstate, action) => {
     case "IncrementByAmount":
       return state + action.payload;
 
+    case "DecrementByAmount": if(state<=0){
+      alert('No Negatives are allowed')
+      return state=0
+    }
+    else{
+      return state - action.payload
+    }
     default:
       return state;
   }
